@@ -1,6 +1,7 @@
 package fr.uge.graphique;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Objects;
@@ -8,10 +9,11 @@ import java.util.Objects;
 import javax.imageio.ImageIO;
 
 import fr.uge.element.foods.Banana;
+import fr.umlv.zen5.ApplicationContext;
 
 
 public class Graphique extends Banana{
-	private final fr.umlv.zen5.ApplicationContext context;
+	private final ApplicationContext context;
 	private final int sizeCase = 80;
 	private final int sizeCasePlayerPlateau = 40;
 
@@ -20,7 +22,7 @@ public class Graphique extends Banana{
 	 * constructor of the graphic object allowing to reduce several calls to context
 	 * @param context element allowing to edit on the graphic window of the game
 	 */
-	public Graphique(fr.umlv.zen5.ApplicationContext context){
+	public Graphique(ApplicationContext context){
 		Objects.requireNonNull(context);
 		this.context = context;
 	}
